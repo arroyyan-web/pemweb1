@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Show</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+     img { display: none; width: 300px; }
+     img.active { display: block; }
+  </style>
+</head>
+<body>
+    
+</body>
+</html>
+<body>
+  <img src="Screenshot_20250923-143126.jpg" class="active">
+  <img src="1000090380-removebg-preview (1) (2).jpg">
+  <img src="-fzya7x.jpg">
+
+  <br>
+  <button id="prev">Prev</button>
+  <button id="next">Next</button>
+
+  <script>
+    let index = 0;
+    let images = $("img");
+
+    function showImage(i) {
+      images.fadeOut().removeClass("active");
+      $(images[i]).fadeIn().addClass("active");
+    }
+
+    $("#next").click(function(){
+      index = (index + 1) % images.length;
+      showImage(index);
+    });
+
+    $("#prev").click(function(){
+      index = (index - 1 + images.length) % images.length;
+      showImage(index);
+    });
+  </script>
+</body>
+</html>

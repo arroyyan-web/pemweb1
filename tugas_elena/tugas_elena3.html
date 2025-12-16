@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+    .question { cursor: pointer; }
+    .answer { display: none; }
+  </style>
+</head>
+<body>
+    
+</body>
+</html>
+<body>
+  <div class="faq">
+    <p class="question">Siapa Presiden Pertama?</p>
+    <p class="answer">Ir. Soekarno.</p>
+
+    <p class="question">Siapa Presiden Kedua?</p>
+    <p class="answer">Soeharto.</p>
+
+    <p class="question">Siapa Presiden Ketiga?</p>
+    <p class="answer">B.J. Habibi.</p>
+
+    <p class="question">Siapa Presiden Keempat?</p>
+    <p class="answer">Abdurrahman Wahid.</p>
+
+    <p class="question">Siapa Presiden Kelima?</p>
+    <p class="answer">Megawati Soekarnoputri.</p>
+  </div>
+
+  <script>
+    $(".question").click(function(){
+      $(this).next(".answer").toggle();
+    });
+
+    $(".question").hover(
+      function(){ $(this).css("color", "blue"); },
+      function(){ $(this).css("color", "black"); }
+    );
+  </script>
+</body>
+</html>

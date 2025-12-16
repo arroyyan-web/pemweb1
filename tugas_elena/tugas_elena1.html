@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+<body>
+  <div id="biodata">
+    <h2 id="nama">Nama : Muhammad Ar Royyan</h2>
+    <p id="nim">NIM : 0110125012</p>
+    <p id="prodi">Program Studi : Sistem Informasi</p>
+    <img id="foto" src="1000090380-removebg-preview (1) (2).jpg">
+  </div>
+
+  <button onclick="ubahNama()">Ubah Nama</button>
+  <button onclick="ubahProdi()">Ubah Program Studi</button>
+  <button onclick="gantiFoto()">Ganti Foto</button>
+  <button onclick="sembunyikan()">Sembunyikan Biodata</button>
+  <button onclick="tampilkan()">Tampilkan Biodata</button>
+
+  <script>
+    function ubahNama() {
+      document.getElementById("nama").innerHTML = "Nama : Nama Mahasiswa";
+    }
+    function ubahProdi() {
+      document.getElementById("prodi").innerHTML = "Program Studi : Studi Apa? ";
+    }
+    function gantiFoto() {
+      document.getElementById("foto").setAttribute("src", "Screenshot_20250923-143126.jpg");
+    }
+    function sembunyikan() {
+      document.getElementById("biodata").style.display = "none";
+    }
+    function tampilkan() {
+      document.getElementById("biodata").style.display = "block";
+    }
+  </script>
+</body>
+</html>
